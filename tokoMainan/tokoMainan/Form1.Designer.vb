@@ -44,10 +44,10 @@ Partial Class Form1
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.dataTabel = New System.Windows.Forms.DataGridView()
+        Me.dgtransaksi = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dataTabel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgtransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -272,13 +272,13 @@ Partial Class Form1
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'dataTabel
+        'dgtransaksi
         '
-        Me.dataTabel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataTabel.Location = New System.Drawing.Point(13, 350)
-        Me.dataTabel.Name = "dataTabel"
-        Me.dataTabel.Size = New System.Drawing.Size(451, 132)
-        Me.dataTabel.TabIndex = 4
+        Me.dgtransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgtransaksi.Location = New System.Drawing.Point(13, 350)
+        Me.dgtransaksi.Name = "dgtransaksi"
+        Me.dgtransaksi.Size = New System.Drawing.Size(451, 132)
+        Me.dgtransaksi.TabIndex = 4
         '
         'Form1
         '
@@ -286,7 +286,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(489, 502)
-        Me.Controls.Add(Me.dataTabel)
+        Me.Controls.Add(Me.dgtransaksi)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
@@ -298,7 +298,7 @@ Partial Class Form1
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.dataTabel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgtransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -326,5 +326,5 @@ Partial Class Form1
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
-    Friend WithEvents dataTabel As DataGridView
+    Friend WithEvents dgtransaksi As DataGridView
 End Class

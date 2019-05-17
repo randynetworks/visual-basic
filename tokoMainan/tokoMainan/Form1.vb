@@ -6,7 +6,13 @@
     Public dtadapter As OleDb.OleDbDataAdapter
     Public ttable As New DataTable
 
-
+    Sub daftar()
+        sql = "select * from transaksi"
+        dtadapter = New OleDb.OleDbDataAdapter(sql, conn)
+        ttable.Clear()
+        dtadapter.Fill(ttable)
+        dgtransaksi.DataSource = ttable
+    End Sub
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
@@ -59,6 +65,7 @@
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Tersimpan", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        daftar()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -68,11 +75,13 @@
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Terhapus", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        daftar()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         koneksi = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\GitHub\visual-basic\tokoMainan\toko.mdb"
         conn = New OleDb.OleDbConnection(koneksi)
         conn.Open()
+        daftar()
     End Sub
 End Class
