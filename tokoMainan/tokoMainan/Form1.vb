@@ -1,4 +1,10 @@
 ﻿Public Class Form1
+
+    Public koneksi, sql As String
+    Public conn As OleDb.OleDbConnection
+    Public cmd As OleDb.OleDbCommand
+    Public dtadapter As OleDb.OleDbDataAdapter
+    Public ttable As New DataTable
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
@@ -35,5 +41,11 @@
 
     Private Sub Pajak_TextChanged(sender As Object, e As EventArgs) Handles pajak.TextChanged
         total.Text = Val(subTotal.Text) + Val(pajak.Text)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        koneksi = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\GitHub\visual-basic\tokoMainan\toko.mdb"
+        conn = New OleDb.OleDbConnection(koneksi)
+        conn.Open()
     End Sub
 End Class
