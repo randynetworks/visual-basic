@@ -24,4 +24,16 @@
             harga.Text = 65000
         End If
     End Sub
+
+    Private Sub Jumlah_TextChanged(sender As Object, e As EventArgs) Handles jumlah.TextChanged
+        subTotal.Text = Val(harga.Text) * Val(jumlah.Text)
+    End Sub
+
+    Private Sub SubTotal_TextChanged(sender As Object, e As EventArgs) Handles subTotal.TextChanged
+        pajak.Text = Val(harga.Text) * 0.1
+    End Sub
+
+    Private Sub Pajak_TextChanged(sender As Object, e As EventArgs) Handles pajak.TextChanged
+        total.Text = Val(subTotal.Text) + Val(pajak.Text)
+    End Sub
 End Class
