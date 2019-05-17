@@ -43,6 +43,22 @@
         total.Text = Val(subTotal.Text) + Val(pajak.Text)
     End Sub
 
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim a, b, c, d, ee, f, g As String
+        a = kode.Text
+        b = nama.Text
+        c = harga.Text
+        d = jumlah.Text
+        ee = subTotal.Text
+        f = pajak.Text
+        g = total.Text
+
+        sql = "insert into transaksi values ('" & a & "', '" & b & "','" & c & "','" & d & "','" & ee & "','" & f & "','" & g & "')"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Data Tersimpan", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         koneksi = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\GitHub\visual-basic\tokoMainan\toko.mdb"
         conn = New OleDb.OleDbConnection(koneksi)
