@@ -5,6 +5,8 @@
     Public cmd As OleDb.OleDbCommand
     Public dtadapter As OleDb.OleDbDataAdapter
     Public ttable As New DataTable
+
+
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
@@ -57,6 +59,15 @@
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Tersimpan", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim pesan As String
+        pesan = InputBox("masukan Kode")
+        sql = "delete from transaksi where kode='" & pesan & "'"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Data Terhapus", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
