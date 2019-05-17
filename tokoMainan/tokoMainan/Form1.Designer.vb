@@ -212,6 +212,7 @@ Partial Class Form1
         'nama
         '
         Me.nama.FormattingEnabled = True
+        Me.nama.Items.AddRange(New Object() {"MOBIL", "MOTOR", "BONEKA"})
         Me.nama.Location = New System.Drawing.Point(125, 57)
         Me.nama.Name = "nama"
         Me.nama.Size = New System.Drawing.Size(144, 24)
