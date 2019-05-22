@@ -33,8 +33,8 @@ Partial Class Form1
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgPasien = New System.Windows.Forms.DataGridView()
+        CType(Me.dgPasien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -134,13 +134,13 @@ Partial Class Form1
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgPasien
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 195)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(312, 243)
-        Me.DataGridView1.TabIndex = 11
+        Me.dgPasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgPasien.Location = New System.Drawing.Point(16, 195)
+        Me.dgPasien.Name = "dgPasien"
+        Me.dgPasien.Size = New System.Drawing.Size(312, 243)
+        Me.dgPasien.TabIndex = 11
         '
         'Form1
         '
@@ -148,7 +148,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(341, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgPasien)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnSimpan)
@@ -164,7 +164,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgPasien, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -181,5 +181,5 @@ Partial Class Form1
     Friend WithEvents btnSimpan As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents btnHapus As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgPasien As DataGridView
 End Class
