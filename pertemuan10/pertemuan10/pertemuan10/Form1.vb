@@ -12,11 +12,8 @@
         dtadapter.Fill(ttable)
         dgPasien.DataSource = ttable
     End Sub
-    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Close()
-    End Sub
 
-    Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
+    Sub simpan()
         Dim a, b, c As String
         a = rm.Text
         b = nama.Text
@@ -24,6 +21,24 @@
         sql = "insert into pasien values('" & a & "', '" & b & "', '" & c & "')"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
+    End Sub
+
+    Sub hapus()
+        Dim a, b, c, pesan As String
+        pesan = InputBox("Masukan kode")
+        a = rm.Text
+        b = nama.Text
+        c = alamat.Text
+        sql = "delete from pasien where norm='" & pesan & "'"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+    End Sub
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Close()
+    End Sub
+
+    Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
+        simpan()
         MessageBox.Show("Data Tersimpan", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
         daftar()
     End Sub
@@ -36,14 +51,7 @@
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        Dim a, b, c, pesan As String
-        pesan = InputBox("Masukan kode")
-        a = rm.Text
-        b = nama.Text
-        c = alamat.Text
-        sql = "delete from pasien where norm='" & pesan & "'"
-        cmd = New OleDb.OleDbCommand(sql, conn)
-        cmd.ExecuteNonQuery()
+        hapus()
         MessageBox.Show("Data Terhapus", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
         daftar()
     End Sub
