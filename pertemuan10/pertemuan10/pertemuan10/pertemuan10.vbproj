@@ -153,5 +153,8 @@
       <DependentUpon>rumahsakitDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO-100.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
