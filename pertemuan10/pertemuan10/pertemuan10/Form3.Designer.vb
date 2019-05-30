@@ -28,11 +28,13 @@ Partial Class Form3
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPasienToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPenyakitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataDosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.LightSteelBlue
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -55,7 +57,7 @@ Partial Class Form3
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPasienToolStripMenuItem, Me.DataPenyakitToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPasienToolStripMenuItem, Me.DataPenyakitToolStripMenuItem, Me.DataDosenToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
@@ -71,6 +73,12 @@ Partial Class Form3
         Me.DataPenyakitToolStripMenuItem.Name = "DataPenyakitToolStripMenuItem"
         Me.DataPenyakitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DataPenyakitToolStripMenuItem.Text = "Data Penyakit"
+        '
+        'DataDosenToolStripMenuItem
+        '
+        Me.DataDosenToolStripMenuItem.Name = "DataDosenToolStripMenuItem"
+        Me.DataDosenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DataDosenToolStripMenuItem.Text = "Data Dosen"
         '
         'Form3
         '
@@ -99,4 +107,5 @@ Partial Class Form3
     Friend WithEvents DataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPasienToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPenyakitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DataDosenToolStripMenuItem As ToolStripMenuItem
 End Class
