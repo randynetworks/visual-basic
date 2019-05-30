@@ -10,24 +10,28 @@
         dtadapter = New OleDb.OleDbDataAdapter(sql, conn)
         ttable.Clear()
         dtadapter.Fill(ttable)
-        dgPasien.DataSource = ttable
+        dgdokter.DataSource = ttable
     End Sub
 
     Sub simpan()
         Dim a, b, c, d As String
         a = kodeDokter.Text
         b = nama.Text
-        sql = "insert into penyakit values('" & a & "', '" & b & "')"
+        c = spesialist.Text
+        d = noTelp.Text
+        sql = "insert into dokter values('" & a & "', '" & b & "' , '" & c & "', '" & d & "')"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
     End Sub
 
     Sub hapus()
-        Dim a, b, pesan As String
+        Dim a, b, c, d, pesan As String
         pesan = InputBox("Masukan kode")
         a = kodeDokter.Text
         b = nama.Text
-        sql = "delete from penyakit where kode='" & pesan & "'"
+        c = spesialist.Text
+        d = noTelp.Text
+        sql = "delete from penyakit where kodeDokter='" & pesan & "'"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
     End Sub
@@ -57,6 +61,8 @@
     Private Sub BtnBaru_Click(sender As Object, e As EventArgs) Handles btnBaru.Click
         kodeDokter.Clear()
         nama.Clear()
+        spesialist.Clear()
+        noTelp.Clear()
         MessageBox.Show("Data Baru", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

@@ -10,4 +10,8 @@
     Private Sub DataPenyakitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPenyakitToolStripMenuItem.Click
         Form2.Show()
     End Sub
+
+    Private Sub DataDosenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataDosenToolStripMenuItem.Click
+        Form4.Show()
+    End Sub
 End Class

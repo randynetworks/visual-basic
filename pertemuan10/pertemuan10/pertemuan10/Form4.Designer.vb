@@ -22,187 +22,229 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgPasien = New System.Windows.Forms.DataGridView()
+        Me.dgdokter = New System.Windows.Forms.DataGridView()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnBaru = New System.Windows.Forms.Button()
-        Me.nama = New System.Windows.Forms.TextBox()
-        Me.kodeDokter = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.noTelp = New System.Windows.Forms.TextBox()
         Me.spesialist = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.labell = New System.Windows.Forms.Label()
-        CType(Me.dgPasien, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.nama = New System.Windows.Forms.TextBox()
+        Me.kodeDokter = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        CType(Me.dgdokter, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'dgPasien
+        'dgdokter
         '
-        Me.dgPasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgPasien.Location = New System.Drawing.Point(12, 209)
-        Me.dgPasien.Name = "dgPasien"
-        Me.dgPasien.Size = New System.Drawing.Size(312, 243)
-        Me.dgPasien.TabIndex = 31
+        Me.dgdokter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgdokter.Location = New System.Drawing.Point(273, 59)
+        Me.dgdokter.Name = "dgdokter"
+        Me.dgdokter.Size = New System.Drawing.Size(373, 263)
+        Me.dgdokter.TabIndex = 31
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(249, 170)
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnClose.Location = New System.Drawing.Point(133, 69)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(75, 23)
+        Me.btnClose.Size = New System.Drawing.Size(75, 38)
         Me.btnClose.TabIndex = 30
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(170, 170)
+        Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnHapus.Location = New System.Drawing.Point(23, 69)
         Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(75, 23)
+        Me.btnHapus.Size = New System.Drawing.Size(75, 38)
         Me.btnHapus.TabIndex = 29
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.UseVisualStyleBackColor = True
         '
         'btnSimpan
         '
-        Me.btnSimpan.Location = New System.Drawing.Point(91, 170)
+        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnSimpan.Location = New System.Drawing.Point(133, 25)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.btnSimpan.Size = New System.Drawing.Size(75, 38)
         Me.btnSimpan.TabIndex = 28
         Me.btnSimpan.Text = "Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
         'btnBaru
         '
-        Me.btnBaru.Location = New System.Drawing.Point(12, 170)
+        Me.btnBaru.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBaru.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBaru.Location = New System.Drawing.Point(23, 25)
         Me.btnBaru.Name = "btnBaru"
-        Me.btnBaru.Size = New System.Drawing.Size(75, 23)
+        Me.btnBaru.Size = New System.Drawing.Size(75, 38)
         Me.btnBaru.TabIndex = 27
         Me.btnBaru.Text = "Baru"
         Me.btnBaru.UseVisualStyleBackColor = True
         '
-        'nama
-        '
-        Me.nama.Location = New System.Drawing.Point(79, 79)
-        Me.nama.Name = "nama"
-        Me.nama.Size = New System.Drawing.Size(134, 20)
-        Me.nama.TabIndex = 26
-        '
-        'kodeDokter
-        '
-        Me.kodeDokter.Location = New System.Drawing.Point(79, 50)
-        Me.kodeDokter.Name = "kodeDokter"
-        Me.kodeDokter.Size = New System.Drawing.Size(134, 20)
-        Me.kodeDokter.TabIndex = 25
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(9, 81)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 15)
-        Me.Label4.TabIndex = 24
-        Me.Label4.Text = "Nama"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 52)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 15)
-        Me.Label2.TabIndex = 23
-        Me.Label2.Text = "kode"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 9)
+        Me.Label1.Font = New System.Drawing.Font("Roboto Cn", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(140, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 18)
+        Me.Label1.Size = New System.Drawing.Size(387, 25)
         Me.Label1.TabIndex = 22
-        Me.Label1.Text = "MASTER OBAT"
+        Me.Label1.Text = "MASTER DATA DOKTER RUMAH SAKIT RAINI"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.noTelp)
+        Me.GroupBox1.Controls.Add(Me.spesialist)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.labell)
+        Me.GroupBox1.Controls.Add(Me.nama)
+        Me.GroupBox1.Controls.Add(Me.kodeDokter)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 50)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(245, 141)
+        Me.GroupBox1.TabIndex = 36
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Input"
         '
         'noTelp
         '
-        Me.noTelp.Location = New System.Drawing.Point(79, 134)
+        Me.noTelp.Location = New System.Drawing.Point(90, 106)
         Me.noTelp.Name = "noTelp"
-        Me.noTelp.Size = New System.Drawing.Size(134, 20)
-        Me.noTelp.TabIndex = 35
+        Me.noTelp.Size = New System.Drawing.Size(134, 26)
+        Me.noTelp.TabIndex = 43
         '
         'spesialist
         '
-        Me.spesialist.Location = New System.Drawing.Point(79, 105)
+        Me.spesialist.Location = New System.Drawing.Point(90, 77)
         Me.spesialist.Name = "spesialist"
-        Me.spesialist.Size = New System.Drawing.Size(134, 20)
-        Me.spesialist.TabIndex = 34
+        Me.spesialist.Size = New System.Drawing.Size(134, 26)
+        Me.spesialist.TabIndex = 42
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(9, 136)
+        Me.Label3.Location = New System.Drawing.Point(20, 108)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 15)
-        Me.Label3.TabIndex = 33
+        Me.Label3.TabIndex = 41
         Me.Label3.Text = "No Telp"
         '
         'labell
         '
         Me.labell.AutoSize = True
         Me.labell.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labell.Location = New System.Drawing.Point(9, 107)
+        Me.labell.Location = New System.Drawing.Point(20, 79)
         Me.labell.Name = "labell"
         Me.labell.Size = New System.Drawing.Size(65, 15)
-        Me.labell.TabIndex = 32
+        Me.labell.TabIndex = 40
         Me.labell.Text = "Specialist"
+        '
+        'nama
+        '
+        Me.nama.Location = New System.Drawing.Point(90, 51)
+        Me.nama.Name = "nama"
+        Me.nama.Size = New System.Drawing.Size(134, 26)
+        Me.nama.TabIndex = 39
+        '
+        'kodeDokter
+        '
+        Me.kodeDokter.Location = New System.Drawing.Point(90, 22)
+        Me.kodeDokter.Name = "kodeDokter"
+        Me.kodeDokter.Size = New System.Drawing.Size(134, 26)
+        Me.kodeDokter.TabIndex = 38
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(20, 53)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.TabIndex = 37
+        Me.Label4.Text = "Nama"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(20, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 15)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "kode"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnBaru)
+        Me.GroupBox2.Controls.Add(Me.btnSimpan)
+        Me.GroupBox2.Controls.Add(Me.btnHapus)
+        Me.GroupBox2.Controls.Add(Me.btnClose)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 198)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(245, 124)
+        Me.GroupBox2.TabIndex = 37
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Proses"
         '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(339, 464)
-        Me.Controls.Add(Me.noTelp)
-        Me.Controls.Add(Me.spesialist)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.labell)
-        Me.Controls.Add(Me.dgPasien)
-        Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.btnHapus)
-        Me.Controls.Add(Me.btnSimpan)
-        Me.Controls.Add(Me.btnBaru)
-        Me.Controls.Add(Me.nama)
-        Me.Controls.Add(Me.kodeDokter)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
+        Me.ClientSize = New System.Drawing.Size(694, 346)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.dgdokter)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form4"
-        CType(Me.dgPasien, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgdokter, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents dgPasien As DataGridView
+    Friend WithEvents dgdokter As DataGridView
     Friend WithEvents btnClose As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnSimpan As Button
     Friend WithEvents btnBaru As Button
-    Friend WithEvents nama As TextBox
-    Friend WithEvents kodeDokter As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents noTelp As TextBox
     Friend WithEvents spesialist As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents labell As Label
+    Friend WithEvents nama As TextBox
+    Friend WithEvents kodeDokter As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents GroupBox2 As GroupBox
 End Class
