@@ -28,24 +28,28 @@ Partial Class Form4
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnBaru = New System.Windows.Forms.Button()
         Me.nama = New System.Windows.Forms.TextBox()
-        Me.kode = New System.Windows.Forms.TextBox()
+        Me.kodeDokter = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.noTelp = New System.Windows.Forms.TextBox()
+        Me.spesialist = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.labell = New System.Windows.Forms.Label()
         CType(Me.dgPasien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgPasien
         '
         Me.dgPasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgPasien.Location = New System.Drawing.Point(12, 178)
+        Me.dgPasien.Location = New System.Drawing.Point(12, 209)
         Me.dgPasien.Name = "dgPasien"
         Me.dgPasien.Size = New System.Drawing.Size(312, 243)
         Me.dgPasien.TabIndex = 31
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(249, 148)
+        Me.btnClose.Location = New System.Drawing.Point(249, 170)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
         Me.btnClose.TabIndex = 30
@@ -54,7 +58,7 @@ Partial Class Form4
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(170, 148)
+        Me.btnHapus.Location = New System.Drawing.Point(170, 170)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 29
@@ -63,7 +67,7 @@ Partial Class Form4
         '
         'btnSimpan
         '
-        Me.btnSimpan.Location = New System.Drawing.Point(91, 148)
+        Me.btnSimpan.Location = New System.Drawing.Point(91, 170)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
         Me.btnSimpan.TabIndex = 28
@@ -72,7 +76,7 @@ Partial Class Form4
         '
         'btnBaru
         '
-        Me.btnBaru.Location = New System.Drawing.Point(12, 148)
+        Me.btnBaru.Location = New System.Drawing.Point(12, 170)
         Me.btnBaru.Name = "btnBaru"
         Me.btnBaru.Size = New System.Drawing.Size(75, 23)
         Me.btnBaru.TabIndex = 27
@@ -86,12 +90,12 @@ Partial Class Form4
         Me.nama.Size = New System.Drawing.Size(134, 20)
         Me.nama.TabIndex = 26
         '
-        'kode
+        'kodeDokter
         '
-        Me.kode.Location = New System.Drawing.Point(79, 50)
-        Me.kode.Name = "kode"
-        Me.kode.Size = New System.Drawing.Size(134, 20)
-        Me.kode.TabIndex = 25
+        Me.kodeDokter.Location = New System.Drawing.Point(79, 50)
+        Me.kodeDokter.Name = "kodeDokter"
+        Me.kodeDokter.Size = New System.Drawing.Size(134, 20)
+        Me.kodeDokter.TabIndex = 25
         '
         'Label4
         '
@@ -123,19 +127,57 @@ Partial Class Form4
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "MASTER OBAT"
         '
+        'noTelp
+        '
+        Me.noTelp.Location = New System.Drawing.Point(79, 134)
+        Me.noTelp.Name = "noTelp"
+        Me.noTelp.Size = New System.Drawing.Size(134, 20)
+        Me.noTelp.TabIndex = 35
+        '
+        'spesialist
+        '
+        Me.spesialist.Location = New System.Drawing.Point(79, 105)
+        Me.spesialist.Name = "spesialist"
+        Me.spesialist.Size = New System.Drawing.Size(134, 20)
+        Me.spesialist.TabIndex = 34
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(9, 136)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 15)
+        Me.Label3.TabIndex = 33
+        Me.Label3.Text = "No Telp"
+        '
+        'labell
+        '
+        Me.labell.AutoSize = True
+        Me.labell.Font = New System.Drawing.Font("Lucida Bright", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labell.Location = New System.Drawing.Point(9, 107)
+        Me.labell.Name = "labell"
+        Me.labell.Size = New System.Drawing.Size(65, 15)
+        Me.labell.TabIndex = 32
+        Me.labell.Text = "Specialist"
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(339, 436)
+        Me.ClientSize = New System.Drawing.Size(339, 464)
+        Me.Controls.Add(Me.noTelp)
+        Me.Controls.Add(Me.spesialist)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.labell)
         Me.Controls.Add(Me.dgPasien)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.btnBaru)
         Me.Controls.Add(Me.nama)
-        Me.Controls.Add(Me.kode)
+        Me.Controls.Add(Me.kodeDokter)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -155,8 +197,12 @@ Partial Class Form4
     Friend WithEvents btnSimpan As Button
     Friend WithEvents btnBaru As Button
     Friend WithEvents nama As TextBox
-    Friend WithEvents kode As TextBox
+    Friend WithEvents kodeDokter As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents noTelp As TextBox
+    Friend WithEvents spesialist As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents labell As Label
 End Class

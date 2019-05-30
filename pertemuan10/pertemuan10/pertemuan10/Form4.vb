@@ -6,7 +6,7 @@
     Public ttable As New DataTable
 
     Sub daftar() 'untuk menampilkan data di dtransaksi
-        sql = "select * from penyakit"
+        sql = "select * from dokter"
         dtadapter = New OleDb.OleDbDataAdapter(sql, conn)
         ttable.Clear()
         dtadapter.Fill(ttable)
@@ -14,8 +14,8 @@
     End Sub
 
     Sub simpan()
-        Dim a, b As String
-        a = kode.Text
+        Dim a, b, c, d As String
+        a = kodeDokter.Text
         b = nama.Text
         sql = "insert into penyakit values('" & a & "', '" & b & "')"
         cmd = New OleDb.OleDbCommand(sql, conn)
@@ -25,7 +25,7 @@
     Sub hapus()
         Dim a, b, pesan As String
         pesan = InputBox("Masukan kode")
-        a = kode.Text
+        a = kodeDokter.Text
         b = nama.Text
         sql = "delete from penyakit where kode='" & pesan & "'"
         cmd = New OleDb.OleDbCommand(sql, conn)
@@ -55,7 +55,7 @@
     End Sub
 
     Private Sub BtnBaru_Click(sender As Object, e As EventArgs) Handles btnBaru.Click
-        kode.Clear()
+        kodeDokter.Clear()
         nama.Clear()
         MessageBox.Show("Data Baru", "Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
