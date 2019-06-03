@@ -38,7 +38,7 @@ Partial Class Form3
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(756, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(996, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -78,7 +78,7 @@ Partial Class Form3
         '
         Me.DataDosenToolStripMenuItem.Name = "DataDosenToolStripMenuItem"
         Me.DataDosenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DataDosenToolStripMenuItem.Text = "Data Dosen"
+        Me.DataDosenToolStripMenuItem.Text = "Data Dokter"
         '
         'Form3
         '
@@ -86,8 +86,8 @@ Partial Class Form3
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Blue
         Me.BackgroundImage = Global.pertemuan10.My.Resources.Resources.LOGO_100
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(756, 350)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ClientSize = New System.Drawing.Size(996, 759)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1

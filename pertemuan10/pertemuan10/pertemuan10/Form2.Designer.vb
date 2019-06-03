@@ -44,7 +44,7 @@ Partial Class Form2
         Me.dgPasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgPasien.Location = New System.Drawing.Point(263, 48)
         Me.dgPasien.Name = "dgPasien"
-        Me.dgPasien.Size = New System.Drawing.Size(210, 243)
+        Me.dgPasien.Size = New System.Drawing.Size(232, 243)
         Me.dgPasien.TabIndex = 21
         '
         'btnClose
@@ -171,7 +171,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ClientSize = New System.Drawing.Size(500, 313)
+        Me.ClientSize = New System.Drawing.Size(515, 313)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

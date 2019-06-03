@@ -31,7 +31,7 @@
         b = nama.Text
         c = spesialist.Text
         d = noTelp.Text
-        sql = "delete from penyakit where kodeDokter='" & pesan & "'"
+        sql = "delete from dokter where kodeDokter='" & pesan & "'"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
     End Sub
