@@ -22,63 +22,63 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPasienToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPenyakitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataDosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnPasien = New System.Windows.Forms.Button()
+        Me.dataPenyakit = New System.Windows.Forms.Button()
+        Me.DataDokter = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'GroupBox1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(996, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.GroupBox1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.GroupBox1.Controls.Add(Me.btnExit)
+        Me.GroupBox1.Controls.Add(Me.DataDokter)
+        Me.GroupBox1.Controls.Add(Me.dataPenyakit)
+        Me.GroupBox1.Controls.Add(Me.btnPasien)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(996, 56)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
         '
-        'FileToolStripMenuItem
+        'btnPasien
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.btnPasien.Location = New System.Drawing.Point(2, 9)
+        Me.btnPasien.Name = "btnPasien"
+        Me.btnPasien.Size = New System.Drawing.Size(100, 43)
+        Me.btnPasien.TabIndex = 0
+        Me.btnPasien.Text = "Data Pasien"
+        Me.btnPasien.UseVisualStyleBackColor = True
         '
-        'ExitToolStripMenuItem
+        'dataPenyakit
         '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.dataPenyakit.Location = New System.Drawing.Point(108, 9)
+        Me.dataPenyakit.Name = "dataPenyakit"
+        Me.dataPenyakit.Size = New System.Drawing.Size(100, 43)
+        Me.dataPenyakit.TabIndex = 1
+        Me.dataPenyakit.Text = "Data Penyakit"
+        Me.dataPenyakit.UseVisualStyleBackColor = True
         '
-        'DataToolStripMenuItem
+        'DataDokter
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPasienToolStripMenuItem, Me.DataPenyakitToolStripMenuItem, Me.DataDosenToolStripMenuItem})
-        Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
-        Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
-        Me.DataToolStripMenuItem.Text = "Data"
+        Me.DataDokter.Location = New System.Drawing.Point(214, 9)
+        Me.DataDokter.Name = "DataDokter"
+        Me.DataDokter.Size = New System.Drawing.Size(100, 43)
+        Me.DataDokter.TabIndex = 2
+        Me.DataDokter.Text = "Data Dokter"
+        Me.DataDokter.UseVisualStyleBackColor = True
         '
-        'DataPasienToolStripMenuItem
+        'btnExit
         '
-        Me.DataPasienToolStripMenuItem.Name = "DataPasienToolStripMenuItem"
-        Me.DataPasienToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DataPasienToolStripMenuItem.Text = "Data Pasien"
-        '
-        'DataPenyakitToolStripMenuItem
-        '
-        Me.DataPenyakitToolStripMenuItem.Name = "DataPenyakitToolStripMenuItem"
-        Me.DataPenyakitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DataPenyakitToolStripMenuItem.Text = "Data Penyakit"
-        '
-        'DataDosenToolStripMenuItem
-        '
-        Me.DataDosenToolStripMenuItem.Name = "DataDosenToolStripMenuItem"
-        Me.DataDosenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DataDosenToolStripMenuItem.Text = "Data Dokter"
+        Me.btnExit.Location = New System.Drawing.Point(890, 9)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(100, 43)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Form3
         '
@@ -87,25 +87,19 @@ Partial Class Form3
         Me.BackColor = System.Drawing.Color.Blue
         Me.BackgroundImage = Global.pertemuan10.My.Resources.Resources.LOGO_100
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(996, 759)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.ClientSize = New System.Drawing.Size(996, 853)
+        Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form3"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form3"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPasienToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPenyakitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataDosenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnPasien As Button
+    Friend WithEvents DataDokter As Button
+    Friend WithEvents dataPenyakit As Button
+    Friend WithEvents btnExit As Button
 End Class
