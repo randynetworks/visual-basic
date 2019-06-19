@@ -25,17 +25,17 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.tbKode = New System.Windows.Forms.TextBox()
-        Me.tbTanggal = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbHarga = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cbJenis = New System.Windows.Forms.ComboBox()
         Me.tbTotal = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tbJumlah = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.cbJenis = New System.Windows.Forms.ComboBox()
+        Me.tbHarga = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.tbTanggal = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.tbKode = New System.Windows.Forms.TextBox()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -85,53 +85,14 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "INPUT"
         '
-        'tbKode
+        'cbJenis
         '
-        Me.tbKode.Location = New System.Drawing.Point(125, 25)
-        Me.tbKode.Name = "tbKode"
-        Me.tbKode.Size = New System.Drawing.Size(144, 20)
-        Me.tbKode.TabIndex = 3
-        '
-        'tbTanggal
-        '
-        Me.tbTanggal.Location = New System.Drawing.Point(125, 51)
-        Me.tbTanggal.Name = "tbTanggal"
-        Me.tbTanggal.Size = New System.Drawing.Size(144, 20)
-        Me.tbTanggal.TabIndex = 5
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "TANGGAL"
-        '
-        'tbHarga
-        '
-        Me.tbHarga.Location = New System.Drawing.Point(125, 103)
-        Me.tbHarga.Name = "tbHarga"
-        Me.tbHarga.Size = New System.Drawing.Size(144, 20)
-        Me.tbHarga.TabIndex = 9
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 106)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "HARGA"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(18, 80)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "JENIS BARANG"
+        Me.cbJenis.FormattingEnabled = True
+        Me.cbJenis.Items.AddRange(New Object() {" ", "CD", "DVD"})
+        Me.cbJenis.Location = New System.Drawing.Point(125, 77)
+        Me.cbJenis.Name = "cbJenis"
+        Me.cbJenis.Size = New System.Drawing.Size(74, 21)
+        Me.cbJenis.TabIndex = 14
         '
         'tbTotal
         '
@@ -165,13 +126,53 @@ Partial Class Form1
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "JUMLAH"
         '
-        'cbJenis
+        'tbHarga
         '
-        Me.cbJenis.FormattingEnabled = True
-        Me.cbJenis.Location = New System.Drawing.Point(125, 77)
-        Me.cbJenis.Name = "cbJenis"
-        Me.cbJenis.Size = New System.Drawing.Size(74, 21)
-        Me.cbJenis.TabIndex = 14
+        Me.tbHarga.Location = New System.Drawing.Point(125, 103)
+        Me.tbHarga.Name = "tbHarga"
+        Me.tbHarga.Size = New System.Drawing.Size(144, 20)
+        Me.tbHarga.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(18, 106)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "HARGA"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(18, 80)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(85, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "JENIS BARANG"
+        '
+        'tbTanggal
+        '
+        Me.tbTanggal.Location = New System.Drawing.Point(125, 51)
+        Me.tbTanggal.Name = "tbTanggal"
+        Me.tbTanggal.Size = New System.Drawing.Size(144, 20)
+        Me.tbTanggal.TabIndex = 5
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(18, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(58, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "TANGGAL"
+        '
+        'tbKode
+        '
+        Me.tbKode.Location = New System.Drawing.Point(125, 25)
+        Me.tbKode.Name = "tbKode"
+        Me.tbKode.Size = New System.Drawing.Size(144, 20)
+        Me.tbKode.TabIndex = 3
         '
         'btnNew
         '
@@ -229,7 +230,9 @@ Partial Class Form1
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
