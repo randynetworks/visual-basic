@@ -34,6 +34,8 @@
         sql = "delete from transaksi where kode ='" & a & "'"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
+
+
         MessageBox.Show("Data Terhapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
@@ -48,7 +50,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        tbTanggal.Text = Today
         koneksi = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\GitHub\visual-basic\LATIHAN TERAKHIR\penjualan.mdb"
         conn = New OleDb.OleDbConnection(koneksi)
         conn.Open()
@@ -83,6 +85,11 @@
         daftar()
 
     End Sub
+
+    Private Sub TbTanggal_TextChanged(sender As Object, e As EventArgs) Handles tbTanggal.TextChanged
+        tbTanggal.Text = Today
+    End Sub
+
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
