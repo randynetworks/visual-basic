@@ -3,6 +3,7 @@
     Public conn As OleDb.OleDbConnection
     Public cmd As OleDb.OleDbCommand
     Public dtadapter As OleDb.OleDbDataAdapter
+    Public dtreader As OleDb.OleDbDataReader
     Public ttransaksi As New DataTable
 
     Sub daftar()
@@ -28,17 +29,6 @@
         MessageBox.Show("Data Tersimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Sub hapus()
-        Dim a As String
-        a = InputBox("Masukan Kode :")
-        sql = "delete from transaksi where kode ='" & a & "'"
-        cmd = New OleDb.OleDbCommand(sql, conn)
-        cmd.ExecuteNonQuery()
-
-
-        MessageBox.Show("Data Terhapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
     Sub bersih()
         tbKode.Clear()
         tbTanggal.Clear()
@@ -48,7 +38,24 @@
         tbTotal.Clear()
 
     End Sub
+    Sub cari()
+        Dim a As String
+        a = InputBox("Masukan Kode")
+        sql = "select * from transaksi where kode ='" & a & "'"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        dtreader = cmd.ExecuteReader
+        If dtreader.Read Then
+            sql = "delete from transaksi where kode ='" & a & "'"
+            cmd = New OleDb.OleDbCommand(sql, conn)
+            cmd.ExecuteNonQuery()
 
+
+            MessageBox.Show("Data Terhapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MsgBox("Data Tidak Ada")
+        End If
+
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tbTanggal.Text = Today
         koneksi = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\GitHub\visual-basic\LATIHAN TERAKHIR\penjualan.mdb"
@@ -81,7 +88,7 @@
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        hapus()
+        cari()
         daftar()
 
     End Sub
