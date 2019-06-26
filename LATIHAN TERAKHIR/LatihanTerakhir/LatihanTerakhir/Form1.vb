@@ -48,11 +48,9 @@
             sql = "delete from transaksi where kode ='" & a & "'"
             cmd = New OleDb.OleDbCommand(sql, conn)
             cmd.ExecuteNonQuery()
-
-
             MessageBox.Show("Data Terhapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            MsgBox("Data Tidak Ada")
+            MessageBox.Show("Data Tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub
